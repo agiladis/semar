@@ -63,9 +63,8 @@
         </div>
     </div>
 
-    <div class="parallax-content baner-content justify-content-center" id="home">
+    <div class="baner-content justify-content-center" id="home">
         <div class="container">
-
             <div class="text-content">
                 <div class="icon">
                     <a target="_blank" href="http://semar.upnyk.ac.id/dashboard/">

@@ -47,10 +47,23 @@
 
         <script src="{{asset('assets/js/vendor/bootstrap.min.js')}}"></script>
 
+        {{-- for collapse on hover homapage.blade.php --}}
+        <script>
+            $(".panel-heading").parent('.service-item').hover(
+                function () {
+                    $(this).children('.collapse').collapse('show');
+                    // $(this).addClass('panel');
+                }, function () {
+                    $(this).children('.collapse').collapse('hide');
+                    // $(this).removeClass('panel');
+                }
+            );
+        </script>
+
         <script src="{{asset('assets/js/plugins.js')}}"></script>
         <script src="{{asset('assets/js/main.js')}}"></script>
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+        {{-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script> --}}
         <script type="text/javascript">
         $(document).ready(function() {
             // navigation click actions

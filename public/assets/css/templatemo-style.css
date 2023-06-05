@@ -125,8 +125,6 @@ p {
 
 .header.active {
     background-color: rgba(250, 250, 250, 0.98);
-    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
 .navbar-brand {
@@ -167,7 +165,7 @@ p {
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
 	background-color: #f7c552;
 }
-bootstrap.min.css:5
+/* bootstrap.min.css:5 */
 .navbar-toggle {
     position: relative;
     float: right;
@@ -209,11 +207,16 @@ bootstrap.min.css:5
 
 .baner-content {
 	width: 100%;
-  	padding-top: 35vh;
   	text-align: center;
-  	background-image: url(../img/upn_new_bg.png);
   	vertical-align: middle;
-  	background-color: grey;
+	min-height: 100vh;
+}
+.baner-content .container {
+	padding-top: 80px;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .baner-content .text-content {
@@ -250,8 +253,16 @@ bootstrap.min.css:5
 }
 
 
-#about {
+/* #about {
 	padding: 150px 0px;
+	background-image: url(../img/upn_new_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+} */
+
+body {
+	/* padding: 150px 0px; */
 	/* background-image: url(../img/about-bg.jpg); */
 	background-image: url(../img/upn_new_bg.png);
 	background-repeat: no-repeat;
@@ -261,6 +272,15 @@ bootstrap.min.css:5
 
 #about .service-item {
 	text-align: center;
+	padding: 10px 10px 20px 10px;
+	transition: all .5s;
+}
+#about .service-item:hover {
+	background-color: white;
+	border-radius: 10px;
+}
+#about .service-item:hover h4 {
+	color: black;
 }
 
 #about .service-item .icon {
@@ -283,11 +303,11 @@ bootstrap.min.css:5
 	letter-spacing: 1px;
 }
 
-#about .service-item .line-dec {
+/* #about .service-item .line-dec {
 	width: 100%;
 	height: 1px;
 	background-color: rgba(250, 250, 250, 0.5);
-}
+} */
 
 #about .service-item p {
 	color: #fff;
@@ -307,7 +327,7 @@ bootstrap.min.css:5
 	padding: 30px 15px 0px 15px;
 }
 
-.filter-categories {;
+.filter-categories {
   margin-top: 60px;
 }
 
@@ -413,8 +433,6 @@ bootstrap.min.css:5
   margin: 0px 5px;
   filter: alpha(opacity=50);
   opacity: 0.5;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
   border-radius: 20px;
   background: #fff;
 }
